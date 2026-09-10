@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <loc>https://storyrigstudio.com/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://storyrigstudio.com/og-image.png</image:loc>
+      <image:title>StoryRig Studio — 3D animation, VFX and Unreal Engine work by Ajith S</image:title>
+      <image:caption>Real-time cinematic 3D environment rendered in Unreal Engine 5.</image:caption>
+    </image:image>
+
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/GFBCzQBu5x8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>3D Island Environment built in Unreal Engine 5.5</video:title>
+      <video:description>A real-time cinematic island environment created in Unreal Engine 5.5 with assets modelled in Blender, showcasing Lumen lighting, Nanite geometry and full sequencer camera work.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/GFBCzQBu5x8</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/3LgJpp9kmz8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Lord Ganesha — 3D Cave Environment in Unreal Engine 5.5</video:title>
+      <video:description>A devotional cinematic sequence set inside a sculpted cave environment, modelled in Blender and lit and rendered in real time with Unreal Engine 5.5.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/3LgJpp9kmz8</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/P6q2SZ8of5k/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>CGI Airplane Animation — Blender 4.4</video:title>
+      <video:description>A full CGI aircraft animation modelled, shaded and rendered in Blender 4.4, graded and finished in DaVinci Resolve.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/P6q2SZ8of5k</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/afrmrC4tAkg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Mustang GT — Automotive CGI made entirely in Blender 4.4</video:title>
+      <video:description>Photoreal automotive CGI of a Mustang GT: hard-surface modelling, studio and HDRI lighting, shading and compositing produced end to end in Blender 4.4.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/afrmrC4tAkg</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+
+</urlset>

@@ -1,0 +1,43 @@
+{
+  "name": "StoryRig Studio — 3D Animation, VFX & Unreal Engine",
+  "short_name": "StoryRig",
+  "description": "3D animation, CGI visual effects, virtual production and real-time Unreal Engine cinematics by Ajith S. Based in Chennai, working worldwide.",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#05060f",
+  "theme_color": "#05060f",
+  "categories": ["design", "entertainment", "business"],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "StoryRig Studio showreel still"
+    }
+  ]
+}
