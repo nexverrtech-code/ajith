@@ -2,7 +2,7 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { processSteps, services } from "../constants";
+import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import SectionHeading from "./SectionHeading";
 import { useIsTouch, useSpotlight } from "../hooks";
@@ -100,7 +100,6 @@ const Services = () => (
       intro="Animation, effects, virtual production and finishing all run through the same real-time pipeline — so a look developed for a cinematic can be reused on a game level or an ad cut without rebuilding it."
     />
 
-    {/* ---------- Service cards ---------- */}
     <motion.div
       variants={listContainer(0.1, 0.1)}
       className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-5"
@@ -108,49 +107,6 @@ const Services = () => (
       {services.map((service, index) => (
         <ServiceCard key={service.title} index={index} {...service} />
       ))}
-    </motion.div>
-
-    {/* ---------- Process ---------- */}
-    <motion.div variants={revealUp(0.1)} className="mt-20 lg:mt-28">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className={`${styles.sectionSubText} flex items-center gap-3`}>
-            <span
-              aria-hidden="true"
-              className="h-px w-8 bg-gradient-to-r from-violet to-transparent"
-            />
-            How it runs
-          </p>
-          <h3 className="mt-3 font-display text-fluid-h3 font-bold text-white">
-            Four stages, no surprises.
-          </h3>
-        </div>
-        <p className="max-w-md text-[14px] leading-relaxed text-secondary">
-          You approve the motion before anything gets expensive to change. Revisions live
-          at the block stage, not the render stage.
-        </p>
-      </div>
-
-      <motion.ol
-        variants={listContainer(0.1)}
-        className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-4xl border border-white/[.08] bg-white/[.05] sm:grid-cols-2 lg:grid-cols-4"
-      >
-        {processSteps.map((s) => (
-          <motion.li
-            key={s.step}
-            variants={revealUp(0)}
-            className="group relative flex flex-col gap-3 bg-ink-950 p-7 transition-colors duration-500 hover:bg-ink-900 sm:p-8"
-          >
-            <span className="font-mono text-[13px] font-medium text-violet">{s.step}</span>
-            <h4 className="font-display text-lg font-bold text-white">{s.title}</h4>
-            <p className="text-[13.5px] leading-relaxed text-secondary">{s.copy}</p>
-            <span
-              className="absolute inset-x-0 bottom-0 h-px scale-x-0 bg-gradient-to-r from-violet to-aqua transition-transform duration-500 group-hover:scale-x-100"
-              aria-hidden="true"
-            />
-          </motion.li>
-        ))}
-      </motion.ol>
     </motion.div>
   </>
 );

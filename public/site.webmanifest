@@ -1,6 +1,6 @@
 {
-  "name": "StoryRig Studio — 3D Animation, VFX & Unreal Engine",
-  "short_name": "StoryRig",
+  "name": "Ajith S — 3D Animation, VFX & Unreal Engine",
+  "short_name": "Ajith S",
   "description": "3D animation, CGI visual effects, virtual production and real-time Unreal Engine cinematics by Ajith S. Based in Chennai, working worldwide.",
   "start_url": "/?utm_source=pwa",
   "scope": "/",
@@ -37,7 +37,7 @@
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "StoryRig Studio showreel still"
+      "label": "Ajith S — portfolio social card"
     }
   ]
 }

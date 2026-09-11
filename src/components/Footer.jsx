@@ -13,7 +13,7 @@ const SOCIAL_ICONS = {
 
 /**
  * Footer doubles as an SEO surface: it repeats the service names, the city and
- * the entity description as crawlable text, and it's the only place the
+ * the person's description as crawlable text, and it's the only place the
  * service keywords appear as plain links.
  */
 const Footer = () => {
@@ -36,14 +36,14 @@ const Footer = () => {
                 className="h-9 w-9 object-contain"
               />
               <span className="font-display text-[16px] font-bold text-white">
-                StoryRig<span className="text-violet"> Studio</span>
+                Ajith<span className="text-violet"> S</span>
               </span>
             </a>
 
             <p className="max-w-xs text-[13.5px] leading-relaxed text-secondary">
-              A 3D animation, visual effects and virtual production studio led by{" "}
-              {SITE.founder}, building real-time cinematics in Unreal Engine 5 and Blender
-              from {SITE.location.city}, {SITE.location.region}.
+              3D animation, visual effects and virtual production — real-time cinematics
+              built in Unreal Engine 5 and Blender from {SITE.location.city},{" "}
+              {SITE.location.region}.
             </p>
 
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-secondary/80">

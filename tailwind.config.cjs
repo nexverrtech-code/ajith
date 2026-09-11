@@ -53,7 +53,7 @@ module.exports = {
 
       fontSize: {
         // Fluid type — scales smoothly between mobile and desktop
-        "fluid-hero": ["clamp(2.5rem, 1.15rem + 5.1vw, 4.5rem)", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
+        "fluid-hero": ["clamp(2.15rem, 1.05rem + 4.1vw, 3.5rem)", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
         "fluid-h2": ["clamp(1.9rem, 1.1rem + 3.4vw, 3.75rem)", { lineHeight: "1.08", letterSpacing: "-0.025em" }],
         "fluid-h3": ["clamp(1.25rem, 0.95rem + 1.2vw, 1.75rem)", { lineHeight: "1.2", letterSpacing: "-0.015em" }],
         "fluid-body": ["clamp(0.95rem, 0.88rem + 0.35vw, 1.125rem)", { lineHeight: "1.75" }],

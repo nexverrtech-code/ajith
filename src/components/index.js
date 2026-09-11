@@ -16,7 +16,6 @@ import BackToTop from "./BackToTop";
 import Contact from "./Contact";
 import CustomCursor from "./CustomCursor";
 import Experience from "./Experience";
-import Faq from "./Faq";
 import Feedbacks from "./Feedbacks";
 import Footer from "./Footer";
 import Hero from "./Hero";
@@ -39,7 +38,6 @@ export {
   Contact,
   CustomCursor,
   Experience,
-  Faq,
   Feedbacks,
   Footer,
   Hero,

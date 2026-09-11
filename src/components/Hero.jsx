@@ -10,7 +10,19 @@ import { EASE, revealUp, wordChild, wordStagger } from "../utils/motion";
 // The WebGL scene is a heavy chunk — keep it out of the initial bundle.
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
-const HEADLINE = ["3D", "animation,", "VFX", "and", "real-time", "worlds."];
+// The tagline doubles as the H1 — gradient takes over from "every".
+const HEADLINE = [
+  "Every",
+  "frame",
+  "tells",
+  "a",
+  "story,",
+  "every",
+  "motion",
+  "sparks",
+  "emotion.",
+];
+const GRADIENT_FROM = 5;
 
 /** Each stat counts up once it enters the viewport. */
 const Stat = ({ value, suffix, label }) => {
@@ -112,7 +124,8 @@ const Hero = () => {
             transition={{ duration: 0.6, ease: EASE, delay: 0.32 }}
             className="mt-7 font-mono text-eyebrow uppercase text-violet-soft"
           >
-            Hi, I&apos;m {SITE.founder} — founder of {SITE.name}
+            Hi, I&apos;m{" "}
+            <span className="font-bold tracking-[0.12em] text-white">{SITE.name}</span>
           </motion.p>
 
           {/* H1: masked word-by-word reveal */}
@@ -127,7 +140,7 @@ const Hero = () => {
                 <motion.span
                   variants={wordChild}
                   className={`inline-block ${
-                    i >= 4 ? "text-gradient-animated" : ""
+                    i >= GRADIENT_FROM ? "text-gradient-animated" : ""
                   }`}
                 >
                   {word}
@@ -168,9 +181,9 @@ const Hero = () => {
             animate="show"
             className={`${styles.heroSubText} mt-6`}
           >
-            <em className="not-italic text-white/90">{SITE.tagline}</em> {SITE.name} builds
-            cinematic 3D environments, animation and visual effects in Unreal Engine 5 and
-            Blender — for brands, creators and films, from {SITE.location.city} to anywhere.
+            I build cinematic 3D environments, animation and visual effects in Unreal
+            Engine 5 and Blender — for brands, creators and films, from{" "}
+            {SITE.location.city} to anywhere.
           </motion.p>
 
           {/* CTAs */}

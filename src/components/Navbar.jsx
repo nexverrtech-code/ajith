@@ -89,7 +89,7 @@ const Navbar = () => {
             />
           </span>
           <span className="font-display text-[15px] font-bold leading-none tracking-tight text-white sm:text-[17px]">
-            StoryRig<span className="text-violet"> Studio</span>
+            Ajith<span className="text-violet"> S</span>
           </span>
         </a>
 
@@ -123,7 +123,7 @@ const Navbar = () => {
         {/* Desktop CTA */}
         <a
           href="#contact"
-          className="btn btn-primary hidden !px-5 !py-2.5 !text-[14px] lg:inline-flex"
+          className="btn btn-primary !hidden !px-5 !py-2.5 !text-[14px] lg:!inline-flex"
         >
           Start a project
           <svg

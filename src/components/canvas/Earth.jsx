@@ -32,7 +32,7 @@ const EarthCanvas = () => {
       ref={wrapRef}
       className="h-full w-full"
       role="img"
-      aria-label="Rotating globe — StoryRig Studio works with clients worldwide"
+      aria-label="Rotating globe — working with clients worldwide"
     >
       <Canvas
         shadows

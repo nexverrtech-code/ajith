@@ -1,7 +1,7 @@
-# StoryRig Studio
+# Ajith S — Portfolio
 
-Portfolio site for **StoryRig Studio** — 3D animation, CGI visual effects, virtual
-production and real-time Unreal Engine cinematics by **Ajith S**, Chennai.
+Personal portfolio for **Ajith S** — 3D animation, CGI visual effects, virtual
+production and real-time Unreal Engine cinematics, from Chennai.
 
 React 18 · Vite 4 · Tailwind CSS 3 · three.js / react-three-fiber · Framer Motion
 
@@ -21,8 +21,9 @@ npm run dev
 | `npm run preview` | Serve the built `dist/` on `:4173` |
 | `npm run images` | Regenerate every served image variant into `public/media` |
 | `npm run models` | Re-optimise the glTF textures in `public/desktop_pc` and `public/planet` |
+| `npm run brand` | Regenerate the monogram, favicon, PWA icons and Open Graph card |
 | `npm run seo:sync` | Push `SITE.url` out to every file that hard-codes the domain |
-| `npm run seo:check` | Pre-deploy SEO/GEO audit — fails the build on a broken canonical, invalid JSON-LD, or FAQ schema that drifted from the page copy |
+| `npm run seo:check` | Pre-deploy SEO/GEO audit — fails on a broken canonical, invalid JSON-LD or a sitemap on the wrong origin |
 
 ---
 
@@ -48,8 +49,8 @@ public/
   site.webmanifest         PWA / installable metadata
   media/                   Every image the browser actually downloads (generated)
 src/
-  constants/site.js        Brand, domain, location, contact, EmailJS keys
-  constants/index.js       Nav, services, tools, projects, experience, FAQ
+  constants/site.js        Identity, domain, location, contact, EmailJS keys
+  constants/index.js       Nav, stats, services, tools, projects, experience
   components/              One file per section, plus the shared chrome
   components/canvas/       The four WebGL scenes (lazy-loaded)
   hooks/                   Media queries, scroll, capability detection, count-up
@@ -66,12 +67,14 @@ model-masters/             Untouched glTF originals (not built, keep in the repo
   matching a poster in `public/media`. To add one: drop the master PNG in
   `src/assets/`, add it to `POSTERS` in `scripts/optimize-images.mjs`, run
   `npm run images`, then add the project with that slug.
-- **FAQ** — the answers live in **three** places that must stay identical: the
-  `faqs` array, the `FAQPage` JSON-LD in `index.html`, and `public/llms.txt`.
-  Google only honours FAQ structured data when the answer is visible on the page,
-  and generative engines quote whichever wording they find in both. `npm run seo:check`
-  fails if they drift apart.
-- **Services, tools, experience** — all in `src/constants/index.js`.
+- **Services, tools, experience, stats** — all in `src/constants/index.js`.
+- **Name, tagline, domain, socials** — `src/constants/site.js`. It is the only place
+  the identity is written; the navbar, footer, meta tags and `aria-label`s all read
+  from it.
+- **Brand artwork** — `scripts/make-brand.mjs` draws the "AS" monogram and the social
+  card from one vector source and writes `brand.png`, `brand-logo.png`, `favicon.png`,
+  `apple-touch-icon.png` and `og-image.png`. Edit the constants at the top of that
+  file, then `npm run brand`.
 - **Contact form** — EmailJS, sent with `send()` against the existing template
   (`{{from_name}}`, `{{from_email}}`, `{{message}}`). The project-type dropdown is
   folded into the message body so the template needs no changes.
@@ -125,7 +128,7 @@ image, flat tool tiles, a CSS starfield and a CSS globe.
 
 - `MotionConfig reducedMotion="user"` in `App.jsx` makes the OS setting govern Framer
   Motion, not just CSS. Without it every JS-driven reveal ignores the preference.
-- Skip link, focus-visible rings, `aria-expanded`/`aria-controls` on the nav and FAQ,
+- Skip link, focus-visible rings, `aria-expanded`/`aria-controls` on the nav,
   a labelled modal dialog, and 44 px touch targets.
 - The 3D scenes carry `role="img"` labels, and the tool marquee and tech balls have
   screen-reader text equivalents.
@@ -139,15 +142,15 @@ page's substance in plain HTML. Google executes JavaScript; most AI answer engin
 do not, so that block plus `llms.txt` is what they actually read. Keep it in sync when
 services or work change.
 
-Structured data is one `@graph` covering `ProfessionalService`/`Organization`, `Person`,
-`WebSite`, `WebPage`, `BreadcrumbList`, an `ItemList` of `VideoObject`s, and `FAQPage`,
-cross-referenced by `@id`.
+Structured data is one `@graph` with `Person` as the primary entity, plus
+`ProfessionalService`, `ImageObject`, `WebSite`, `WebPage`, `BreadcrumbList` and an
+`ItemList` of `VideoObject`s, cross-referenced by `@id`.
 
 ---
 
 ## Known constraints
 
-- Desktop opens **12 WebGL contexts** (1 hero + 9 tool balls + globe + starfield)
+- Desktop opens **11 WebGL contexts** (1 hero + 8 tool balls + globe + starfield)
   against a browser limit near 16. Adding more canvases risks blank ones; add tools to
   the flat-tile grid instead.
 - `testimonials` in `src/constants/index.js` is intentionally empty and the

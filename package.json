@@ -1,9 +1,9 @@
 {
-  "name": "storyrig-studio",
+  "name": "ajith-s-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "StoryRig Studio — 3D animation, VFX, virtual production and real-time Unreal Engine portfolio by Ajith S.",
+  "description": "Personal portfolio of Ajith S — 3D animation, VFX, virtual production and real-time Unreal Engine work.",
   "author": "Ajith S",
   "license": "UNLICENSED",
   "keywords": [
@@ -20,6 +20,7 @@
     "preview": "vite preview",
     "images": "node scripts/optimize-images.mjs",
     "models": "node scripts/optimize-models.mjs",
+    "brand": "node scripts/make-brand.mjs",
     "seo:sync": "node scripts/sync-seo.mjs",
     "seo:check": "node scripts/check-seo.mjs"
   },

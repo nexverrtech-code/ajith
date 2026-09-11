@@ -16,7 +16,7 @@ import {
   revealUp,
 } from "../utils/motion";
 
-const ALL = "All work";
+const ALL = "All";
 
 const PlayIcon = ({ className = "" }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -181,9 +181,6 @@ const ProjectCard = ({ project, index, onOpen }) => {
           <h3 className="mt-2.5 font-display text-lg font-bold leading-snug text-white sm:text-xl">
             {project.name}
           </h3>
-          <p className="mt-3 text-[13.5px] leading-relaxed text-secondary">
-            {project.description}
-          </p>
         </div>
 
         <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-white/[.07] pt-5">

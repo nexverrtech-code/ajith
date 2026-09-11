@@ -3,8 +3,8 @@
  * Pre-deploy SEO / GEO sanity check.
  *
  * Verifies the things that silently break a launch: a canonical that doesn't
- * match the sitemap, malformed JSON-LD, a missing OG image, FAQ answers in the
- * schema that no longer match the ones on the page.
+ * match the sitemap, malformed JSON-LD, a missing OG image, crawl files that
+ * still point at a previous domain.
  *
  *   npm run seo:check
  */
@@ -102,21 +102,9 @@ if (!ldMatch) {
 }
 
 const types = graph.flatMap((n) => (Array.isArray(n["@type"]) ? n["@type"] : [n["@type"]]));
-for (const t of ["Organization", "Person", "WebSite", "WebPage", "BreadcrumbList", "FAQPage"]) {
+for (const t of ["Person", "ProfessionalService", "WebSite", "WebPage", "BreadcrumbList"]) {
   if (types.includes(t)) ok(`schema ${t}`);
   else caution(`schema ${t} missing`);
-}
-
-/* FAQ answers must match what a visitor can actually read. */
-const faqNode = graph.find((n) => n["@type"] === "FAQPage");
-if (faqNode) {
-  const constants = read("src/constants/index.js");
-  const missing = faqNode.mainEntity.filter((q) => {
-    const needle = q.acceptedAnswer.text.slice(0, 45);
-    return !constants.includes(needle);
-  });
-  if (missing.length === 0) ok(`all ${faqNode.mainEntity.length} FAQ answers match the page copy`);
-  else bad(`${missing.length} FAQ schema answer(s) not found on the page: "${missing[0].name}"`);
 }
 
 /* ---------------------------------------------------------------- */
@@ -125,7 +113,7 @@ section("Crawl files");
 for (const [file, checks] of [
   ["public/robots.txt", ["Sitemap:", "GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended"]],
   ["public/sitemap.xml", ["<urlset", "<loc>"]],
-  ["public/llms.txt", ["# StoryRig Studio", "## Services"]],
+  ["public/llms.txt", ["# Ajith S", "## Services"]],
   ["public/site.webmanifest", ["icons", "theme_color"]],
 ]) {
   if (!existsSync(join(root, file))) {
@@ -154,7 +142,7 @@ if (canonical && existsSync(join(root, "public/sitemap.xml"))) {
 /* ---------------------------------------------------------------- */
 section("Accessibility signals");
 
-const jsxFiles = ["Hero", "About", "Services", "Works", "Contact", "Footer", "Faq"].map(
+const jsxFiles = ["Hero", "About", "Services", "Works", "Contact", "Footer"].map(
   (n) => `src/components/${n}.jsx`
 );
 let imgs = 0;

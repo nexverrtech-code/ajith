@@ -15,7 +15,6 @@ export const navLinks = [
   { id: "services", title: "Services" },
   { id: "experience", title: "Experience" },
   { id: "work", title: "Work" },
-  { id: "faq", title: "FAQ" },
   { id: "contact", title: "Contact" },
 ];
 
@@ -33,10 +32,10 @@ const roles = [
    STATS
    ------------------------------------------------------------------ */
 const stats = [
-  { value: 2, suffix: "+", label: "Years in production" },
+  { value: 2, suffix: "+", label: "Years creating in 3D" },
   { value: 40, suffix: "+", label: "Shots delivered" },
-  { value: 9, suffix: "", label: "Tools in the pipeline" },
-  { value: 100, suffix: "%", label: "Projects finished end to end" },
+  { value: 8, suffix: "", label: "Tools I work in" },
+  { value: 4, suffix: "", label: "Disciplines covered" },
 ];
 
 /* ------------------------------------------------------------------
@@ -85,33 +84,6 @@ const technologies = [
   { name: "Premiere Pro", icon: icon("pp") },
   { name: "Photoshop", icon: icon("ps") },
   { name: "Illustrator", icon: icon("ai") },
-  { name: "Figma", icon: icon("figma") },
-];
-
-/* ------------------------------------------------------------------
-   PROCESS — how a project actually runs
-   ------------------------------------------------------------------ */
-const processSteps = [
-  {
-    step: "01",
-    title: "Brief & board",
-    copy: "We pin down the story, the references and the deliverable list, then board the key beats before a single asset is built.",
-  },
-  {
-    step: "02",
-    title: "Block & previs",
-    copy: "Rough geometry, camera and timing go in first. You approve the motion before anything gets expensive to change.",
-  },
-  {
-    step: "03",
-    title: "Look development",
-    copy: "Modelling, texturing, lighting and shading — the pass that decides whether a frame reads as real or as CG.",
-  },
-  {
-    step: "04",
-    title: "Render & finish",
-    copy: "Render, composite, grade and sound. Delivered in the formats your platform actually needs.",
-  },
 ];
 
 /* ------------------------------------------------------------------
@@ -221,47 +193,12 @@ const projects = [
   },
 ];
 
-/* ------------------------------------------------------------------
-   FAQ
-   These answers are mirrored in the FAQPage JSON-LD in index.html and
-   in /public/llms.txt. Edit all three together — Google requires the
-   schema answer to match what a visitor can actually read.
-   ------------------------------------------------------------------ */
-const faqs = [
-  {
-    q: "What does StoryRig Studio do?",
-    a: "StoryRig Studio produces 3D animation, CGI visual effects, real-time cinematics and virtual production content, primarily in Unreal Engine 5 and Blender, for brands, creators and film projects.",
-  },
-  {
-    q: "Where is StoryRig Studio located?",
-    a: "StoryRig Studio is based in Chennai, Tamil Nadu, India, and works remotely with clients across India and internationally.",
-  },
-  {
-    q: "Which software does StoryRig Studio use?",
-    a: "Unreal Engine 5.5 and Blender 4.4 for 3D and real-time rendering, DaVinci Resolve and Adobe Premiere Pro for edit and colour grade, After Effects for motion graphics and compositing, Substance Painter for texturing, and Photoshop and Illustrator for design.",
-  },
-  {
-    q: "How long does a 3D animation project take?",
-    a: "A short product or logo animation typically takes one to two weeks. A full cinematic environment or a longer CGI sequence usually runs three to six weeks, depending on shot count, asset complexity and the number of revision rounds.",
-  },
-  {
-    q: "Does StoryRig Studio work with clients outside India?",
-    a: "Yes. Projects are delivered remotely worldwide, with review cycles handled over video call and shared links.",
-  },
-  {
-    q: "How do I get a quote from StoryRig Studio?",
-    a: "Send your brief, reference material and deadline through the contact form on this page or message WhatsApp +91 63848 21366. You will normally get a scope and quote back within one working day.",
-  },
-];
-
 export {
   roles,
   stats,
   services,
   technologies,
-  processSteps,
   experiences,
   testimonials,
   projects,
-  faqs,
 };

@@ -7,7 +7,6 @@ import {
   Contact,
   CustomCursor,
   Experience,
-  Faq,
   Footer,
   Hero,
   Marquee,
@@ -53,7 +52,6 @@ const App = () => {
           <Experience />
           <Tech />
           <Works />
-          <Faq />
 
           {/* Starfield sits behind the closing section, as in the original.
               AmbientStars picks WebGL or CSS based on what the device can afford. */}

@@ -1,5 +1,5 @@
 /**
- * Single source of truth for brand, SEO and contact data.
+ * Single source of truth for identity, SEO and contact data.
  *
  * ─────────────────────────────────────────────────────────────
  * DEPLOYING TO A DIFFERENT DOMAIN?
@@ -10,15 +10,14 @@
  */
 
 export const SITE = {
-  name: "StoryRig Studio",
-  shortName: "StoryRig",
+  name: "Ajith S",
+  shortName: "Ajith S",
   logo: "/media/icons/brand.png",
-  url: "https://storyrigstudio.com",
-  founder: "Ajith S",
+  url: "https://ajith.nexverrtech.com",
   role: "3D Animator · VFX Artist · Unreal Engine",
   tagline: "Every frame tells a story, every motion sparks emotion.",
   description:
-    "StoryRig Studio by Ajith S — 3D animation, CGI visual effects, virtual production and real-time Unreal Engine 5 cinematics. Chennai-based, working worldwide.",
+    "Ajith S — 3D animator and Unreal Engine artist in Chennai, India. 3D animation, CGI visual effects, virtual production and real-time cinematics, worldwide.",
 
   location: {
     city: "Chennai",

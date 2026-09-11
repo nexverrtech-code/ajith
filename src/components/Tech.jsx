@@ -42,7 +42,6 @@ const Tech = () => {
         eyebrow="The pipeline"
         title="Tools I reach for"
         accent="every day."
-        intro="Unreal Engine 5.5 and Blender 4.4 do the heavy lifting; the rest of the stack handles texturing, compositing, edit and grade."
       />
 
       <motion.div

@@ -1,5 +1,5 @@
-# robots.txt — StoryRig Studio
-# https://storyrigstudio.com
+# robots.txt — Ajith S
+# https://ajith.nexverrtech.com
 
 # ---------------------------------------------------------------
 # Traditional search crawlers — full access
@@ -11,7 +11,7 @@ Disallow: /*?*fbclid
 
 # ---------------------------------------------------------------
 # GEO / AEO — generative engine crawlers.
-# Explicitly allowed so StoryRig Studio can be cited as a source
+# Explicitly allowed so this portfolio can be cited as a source
 # inside ChatGPT, Claude, Perplexity, Gemini and AI Overviews.
 # ---------------------------------------------------------------
 User-agent: GPTBot
@@ -68,7 +68,7 @@ Allow: /
 # ---------------------------------------------------------------
 # Structured summaries for LLM ingestion
 # ---------------------------------------------------------------
-# LLM context file: https://storyrigstudio.com/llms.txt
+# LLM context file: https://ajith.nexverrtech.com/llms.txt
 
-Sitemap: https://storyrigstudio.com/sitemap.xml
-Host: https://storyrigstudio.com
+Sitemap: https://ajith.nexverrtech.com/sitemap.xml
+Host: https://ajith.nexverrtech.com
